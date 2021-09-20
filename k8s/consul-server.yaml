@@ -16,7 +16,7 @@ spec:
         - name: consul-server
           image: consul
           ports:
-            - containerPort: 8500
+            - containerPort: 8501
           imagePullPolicy: Always
           env:
             - name: CONSUL_BIND_INTERFACE
@@ -30,7 +30,7 @@ spec:
   selector:
     app: consul-server
   ports:
-    - port: 8500
+    - port: 8501
       targetPort: 8500
       nodePort: 32500
   type: NodePort
